@@ -1,5 +1,5 @@
 <template>
-  <div containerSpan>
+  <div class="container-span">
     <span class="span">
         <p>Ops, usuário ou senha inválidos.</p>
         <p>Tente novamente</p>

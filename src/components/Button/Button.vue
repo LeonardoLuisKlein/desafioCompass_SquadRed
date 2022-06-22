@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div  class="button-container">
         <button class="button">{{msgButton}}</button>
   </div>
 </template>
