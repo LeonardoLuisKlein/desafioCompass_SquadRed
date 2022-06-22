@@ -1,6 +1,6 @@
 <template>
-       <div class="container">
-         <input :type="typeInput" class="input">
+       <div class="containerInput">
+         <input :type="typeInput" :class="input" :placeholder="placeholder">
        </div>
 </template>
 
@@ -13,11 +13,13 @@ name: "Inputs",
 
 props: {
     typeInput:String,
-    spanMsg:String
+    spanMsg:String,
+    placeholder:String,
 }
 }
 </script>
 
-<style>
-@import url('./Inputs.scss');
+<style lang="scss" scooped>
+@import "./Inputs.scss"
+
 </style>

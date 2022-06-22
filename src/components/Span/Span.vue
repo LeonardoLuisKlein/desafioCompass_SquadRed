@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <span>
+  <div containerSpan>
+    <span class="span">
         <p>Ops, usuário ou senha inválidos.</p>
         <p>Tente novamente</p>
         </span>
@@ -14,6 +14,9 @@ export default {
 };
 </script>
 
-<style>
-@import url('./Span.scss');
+<style lang="scss" scooped>
+@import "./Span.scss"
+
+
+
 </style>
