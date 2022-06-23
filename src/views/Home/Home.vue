@@ -1,11 +1,11 @@
 <template>
   <div class="home">
     <div class="form">
-      <Inputs typeInput="email" placeholder="Usuário" idInput="userInput" />
-      <Inputs typeInput="password" placeholder="Senha" idInput="pwInput" />
+      <Inputs type="text" placeholder="Usuário" idInput="userInput" />
+      <Inputs type="password" placeholder="Senha" idInput="pwInput" />
 
       <Span />
-      <Button />
+      <Button/>
     </div>
   </div>
 </template>
@@ -23,6 +23,9 @@ export default {
     Span,
     Button,
   },
+  methods: {
+
+  }
 };
 </script>
 
