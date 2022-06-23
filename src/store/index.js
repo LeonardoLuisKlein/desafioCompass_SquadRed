@@ -14,17 +14,6 @@ export default new Vuex.Store({
   },
   getters: {},
   mutations: {
-    // register() {
-    //   const button = document.getElementById("idButton");
-    //   button.addEventListener("click", function () {
-    //     if (this.state.username === this.state.name) {
-    //       console.log("ok");
-    //     }else {
-    //       console.log('not ok');
-    //     }
-    //   });
-    //   console.log("alo");
-    // },
 
     setName(state, name) {
       state.name = name;

@@ -28,11 +28,14 @@ export default {
         this.$store.state.access = true;
         window.localStorage.setItem("access", this.$store.state.access);
         document.getElementById('spanId').style.visibility = 'hidden'
-        // this.$router.push('/Sucess')
+        this.$router.push('/Sucess')
       } else {
         document.getElementById('spanId').style.visibility = 'visible'
         this.$store.state.access = false;
         window.localStorage.setItem("access", this.$store.state.access);
+        document.getElementById('userInput').style.borderColor = '#E9B425'
+        document.getElementById('pwInput').style.borderColor = '#E9B425'
+
       }
     },
   },

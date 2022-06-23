@@ -5,8 +5,9 @@
       <Inputs type="password" placeholder="Senha" idInput="pwInput" />
 
       <Span />
-      <Button/>
+      <Button />
     </div>
+    <p id="teste"></p>
   </div>
 </template>
 
@@ -23,9 +24,7 @@ export default {
     Span,
     Button,
   },
-  methods: {
-
-  }
+  methods: {},
 };
 </script>
 
