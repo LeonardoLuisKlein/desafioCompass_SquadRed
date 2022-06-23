@@ -6,10 +6,10 @@
     
     <Span />
     <Button />
-    <Title nameClass="smallTitle" tMensage= "Our mission is"/>
-    <Title nameClass="bigTitlle" tMensage= "to transform the world"/>
-    <Title nameClass="bigTitlle" tMensage= "builidng digital experiences"/>
-    <Title nameClass="bigTitlle" tMensage= "that enable our client's growth"/>
+    <Title nameClass="smallTitle" tMensage= "Our mission is" type="h4"/>
+    <Title nameClass="bigTitle" tMensage= "to transform the world" type="h3"/>
+    <Title nameClass="bigTitle" tMensage= "builidng digital experiences " type="h3"/>
+    <Title nameClass="bigTitle" tMensage= "that enable our client's growth" type="h3"/>
   </div>
   </div>
 </template>
