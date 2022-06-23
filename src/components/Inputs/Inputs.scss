@@ -4,9 +4,12 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  .containerInput{
+    width: 100%;
   input {
+    cursor: pointer;
     color: #E0E0E0;
-    border: 1px solid black; 
+    border: 1px solid #E0E0E0;
     height: 3em;
     padding: 10px;
     border-radius: 50px;
@@ -20,4 +23,5 @@
   ::placeholder{
     color: #E0E0E0
   }
+}
 }

@@ -2,7 +2,7 @@
   <div class="container-span">
     <span class="span" :id="spanId">
         <p>Ops, usuário ou senha inválidos.</p>
-        <p>Tente novamente</p>
+        <p>Tente novamente!</p>
         </span>
   </div>
 </template>

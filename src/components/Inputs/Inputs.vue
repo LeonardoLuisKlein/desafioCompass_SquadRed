@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div :class="containerInput">
+    <div class="containerInput">
       <input
         :type="type"
         :class="inputClass"
@@ -22,7 +22,6 @@ export default {
     type: String,
     spanMsg: String,
     placeholder: String,
-    containerInput: String,
     idInput: String,
     inputClass: String,
   },

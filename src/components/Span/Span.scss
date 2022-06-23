@@ -3,8 +3,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding-bottom: 3vh;
+    padding-top: 1.5vh;
     .span{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        
         color: #E9B425;
 
     }

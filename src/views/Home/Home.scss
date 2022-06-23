@@ -1,12 +1,61 @@
 .home {
-  .form {
-    #userInput{
-        background:url(../../assets/user.png) no-repeat right 10px center;
+  box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  .leftHome {
+    padding: 15vh 20px;
+    width: 50%;
+    background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%);
+    .welcome {
+      padding-bottom: 20px;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      .title {
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        color: #e0e0e0;
+        font-size: 4em;
+      }
+      .paragraph {
+        font-size: 1em;
+        color: #e0e0e0;
+      }
     }
-    #pwInput {
-      background:url(../../assets/locked.png) no-repeat right 10px center;
-      
-      
+    .form {
+      width: 40%;
+      margin: 10vh auto;
+      h2 {
+        padding-bottom: 2vh;
+        font-size: 2em;
+        color: #e0e0e0;
+      }
+      #userInput {
+        background: url(../../assets/user.png) no-repeat right 10px center;
+      }
+      #pwInput {
+        background: url(../../assets/locked.png) no-repeat right 10px center;
+      }
+    }
+  }
+
+  .rightHome {
+    background: url("/src/assets/laptop.png");
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 50%;
+    height: 100vh;
+    background-size: cover;
+      #logo {
+        display: flex;
+        justify-content: center;
     }
   }
 }
