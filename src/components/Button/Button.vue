@@ -27,8 +27,10 @@ export default {
       if (nameStorage && pwStorage) {
         this.$store.state.access = true;
         window.localStorage.setItem("access", this.$store.state.access);
-        this.$router.push('/Sucess')
+        document.getElementById('spanId').style.visibility = 'hidden'
+        // this.$router.push('/Sucess')
       } else {
+        document.getElementById('spanId').style.visibility = 'visible'
         this.$store.state.access = false;
         window.localStorage.setItem("access", this.$store.state.access);
       }

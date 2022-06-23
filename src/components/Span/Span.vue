@@ -1,6 +1,6 @@
 <template>
   <div class="container-span">
-    <span class="span" v-show="showSpan">
+    <span class="span" :id="spanId">
         <p>Ops, usuário ou senha inválidos.</p>
         <p>Tente novamente</p>
         </span>
@@ -17,6 +17,10 @@ export default {
       showSpan: {
         type:Boolean,
         default: false
+      },
+      spanId: {
+        type:String,
+        default: 'spanId'
       }
     }
 
