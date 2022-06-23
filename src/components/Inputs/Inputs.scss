@@ -1,12 +1,13 @@
 
 
-.containerInput {
-    
-  width: 370px;
+.container{ 
+  width: 100%;
+  display: flex;
+  justify-content: center;
   input {
     color: #E0E0E0;
     border: 1px solid black; 
-    height: 2em;
+    height: 3em;
     padding: 10px;
     border-radius: 50px;
     background: transparent;

@@ -1,6 +1,6 @@
 <template>
-  <div containerSpan>
-    <span class="span">
+  <div class="container-span">
+    <span class="span" :id="spanId">
         <p>Ops, usuário ou senha inválidos.</p>
         <p>Tente novamente</p>
         </span>
@@ -8,9 +8,22 @@
 </template>
 
 <script>
+
+
 export default {
     // eslint-disable-next-line
-    name: "Span"
+    name: "Span",
+    props: {
+      showSpan: {
+        type:Boolean,
+        default: false
+      },
+      spanId: {
+        type:String,
+        default: 'spanId'
+      }
+    }
+
 };
 </script>
 

@@ -1,3 +1,11 @@
-.span {
-    color:#E9B425;;
+.container-span{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    .span{
+        color: #E9B425;
+
+    }
 }
