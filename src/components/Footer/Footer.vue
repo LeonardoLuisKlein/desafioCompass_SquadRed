@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="timerContainer">
-      <Text textClass="aplicattion" msg="Aplicattion refresh in" />
+      <Texts textClass="aplicattion" msg="Aplicattion refresh in" />
       <div class="timerSeconds">
         <Timer />
         <p class="seconds">seconds</p>
@@ -12,11 +12,11 @@
 
 <script>
 import Timer from "./components/Timer/Timer.vue";
-import Text from "../Text/Texts.vue";
+import Texts from "../Texts/Texts.vue";
 export default {
   // eslint-disable-next-line
   name: "Footer",
-  components: { Timer, Text },
+  components: { Timer, Texts },
 };
 </script>
 

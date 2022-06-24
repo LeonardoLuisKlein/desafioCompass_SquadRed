@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Texts from "@/components/Main/Texts/Texts.vue";
+import Texts from "@/components/Texts/Texts.vue";
 import Footer from "@/components/Footer/Footer.vue";
 export default {
   // eslint-disable-next-line

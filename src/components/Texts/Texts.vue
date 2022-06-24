@@ -5,7 +5,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD:src/components/Main/Texts/Texts.vue
 export default {
   // eslint-disable-next-line
   name: "Texts",
@@ -25,7 +24,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" scooped>
 @import './Texts.scss'
 </style>
    
