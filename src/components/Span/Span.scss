@@ -3,9 +3,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding-bottom: 3vh;
+    padding-top: 1.5vh;
     .span{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
         color: #E9B425;
-
     }
 }
+@media(max-width: 370px){
+    .span {
+        font-size: 0.9em;
+    }
+}
+
+
+@media(max-width: 330px){
+    .span {
+        font-size: 0.7em;
+    }
+}
+
