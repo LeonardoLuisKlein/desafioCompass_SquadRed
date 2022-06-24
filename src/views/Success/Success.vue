@@ -1,21 +1,21 @@
 <template>
   <div>
-    <Text msg="Nossa missão é" />
-    <Text msg="Transformar o mundo" />
-    <Text msg="construindo experiências digitais" />
-    <Text msg="que permitam o crescimento dos nossos clientes" />
+    <Texts msg="Nossa missão é" />
+    <Texts msg="Transformar o mundo" />
+    <Texts msg="construindo experiências digitais" />
+    <Texts msg="que permitam o crescimento dos nossos clientes" />
     <Footer />
   </div>
 </template>
 
 <script>
-import Text from "@/components/Text/Text.vue";
+import Texts from "@/components/Main/Texts/Texts.vue";
 import Footer from "@/components/Footer/Footer.vue";
 export default {
   // eslint-disable-next-line
   name: "Success",
   components: {
-    Text,
+    Texts,
     Footer,
 
   },
