@@ -5,11 +5,12 @@
 </template>
 
 <script>
-import Timer from './components/Timer/Timer.vue'
+import Timer from "./components/Timer/Timer.vue";
 export default {
   // eslint-disable-next-line
   name: "Footer",
-  components: Timer
+  components: { Timer 
+  },
 };
 </script>
 
