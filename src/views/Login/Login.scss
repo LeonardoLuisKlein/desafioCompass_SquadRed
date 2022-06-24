@@ -5,10 +5,12 @@
   background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%);
   display: flex;
   justify-content: center;
-  flex-grow: 1;
+  min-height: 850px;
+
+
   .left-login {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
     width: 50vw;
     #logo1 {
