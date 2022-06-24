@@ -7,13 +7,13 @@
   justify-content: center;
   min-height: 850px;
 
-
   .left-login {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     width: 50vw;
     #logo1 {
+        width: 70%;
       img {
         height: 70px;
         visibility: hidden;
@@ -91,12 +91,12 @@
         }
       }
       .button-container {
-        padding-bottom: 50px;
+        padding-top: 50px;
       }
 
       width: 100vw !important;
       .welcome {
-        padding-top: 60px !important;
+        padding-top: 40px !important;
         width: 70% !important;
       }
       .form {
@@ -116,8 +116,6 @@
     }
   }
 
-
-
   @media (max-height: 700px) {
     img {
       width: 200px !important;
@@ -128,22 +126,25 @@
 
 //media ihpone se / galaxy fold
 @media (max-height: 760px) {
-  .left-login {
-    .welcome {
-      .title {
-        font-size: 3em !important;
-      }
-      .paragraph {
-        font-size: 0.8em !important;
-      }
+  .login {
+    max-height: 700px;
+    .left-login {
       .button-container {
-        padding-bottom: 0px;
+        padding-top: 20px !important;
+      }
+      .welcome {
+        .title {
+          font-size: 3em !important;
+        }
+        .paragraph {
+          font-size: 0.8em !important;
+        }
       }
     }
-  }
-  img {
-    width: 200px !important;
-    height: 60px !important;
+    img {
+      width: 200px !important;
+      height: 60px !important;
+    }
   }
 }
 
