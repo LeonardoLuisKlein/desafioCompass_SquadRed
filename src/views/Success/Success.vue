@@ -17,6 +17,7 @@ export default {
   components: {
     Text,
     Footer,
+
   },
 };
 </script>
