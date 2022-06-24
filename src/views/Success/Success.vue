@@ -1,5 +1,6 @@
 <template>
   <div>
+    
     <Text msg="Nossa missão é" />
     <Text msg="Transformar o mundo" />
     <Text msg="construindo experiências digitais" />
@@ -12,7 +13,7 @@ import Text from "@/components/Main/Text/Text.vue";
 
 export default {
     // eslint-disable-next-line
-    name: 'Succcess',
+    name: 'Success',
     components: {
       Text,
   },
