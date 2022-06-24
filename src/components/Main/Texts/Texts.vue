@@ -7,7 +7,7 @@
 <script>
     export default {
     // eslint-disable-next-line
-        name: "Text",
+        name: "Texts",
         props:{
             type:{
                 type: String,
@@ -26,5 +26,5 @@
 </script>
 
 <style lang="scss" scoped>
-@import './Text.scss';
+@import './Texts.scss';
 </style>
