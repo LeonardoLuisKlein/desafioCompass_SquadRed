@@ -1,3 +1,29 @@
-.button {
-    color: #FFFFFF;
+.button-container {
+  display: flex;
+  justify-content: center;
+  .button {
+    cursor: pointer;
+    color: #ffffff;
+    background: linear-gradient(90deg, #ff2d04 0%, #c13216 100%);
+    border: 2px solid;
+    border-image-source: linear-gradient(
+      132.34deg,
+      #ff2d04 22.57%,
+      #c13216 72.04%
+    );
+    border-image-slice: 0;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15) inset;
+    border-radius: 50px;
+    width: 100%;
+    height: 4.5em;
+    transition: 1s;
+  }
+}
+.button:hover {
+  color: #ff2d04;
+  background: rgb(243, 243, 243);
+  transition: 1s;
+}
+
+@media (max-width: 768px) {
 }

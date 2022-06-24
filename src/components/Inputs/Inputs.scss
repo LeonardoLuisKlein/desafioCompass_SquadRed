@@ -1,13 +1,17 @@
 
 
-.containerInput {
-    
-  width: 370px;
+.container{ 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .containerInput{
+    width: 100%;
   input {
+    cursor: pointer;
     color: #E0E0E0;
-    border: 1px solid black; 
-    height: 2em;
-    padding: 10px;
+    border: 1px solid #E0E0E0;
+    height: 4.5em;
+    padding: 15px;
     border-radius: 50px;
     background: transparent;
     margin-bottom: 20px;
@@ -20,3 +24,11 @@
     color: #E0E0E0
   }
 }
+}
+
+@media (max-width: 768px) {
+  input {
+    height: 4em !important;
+  }
+}
+
