@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <div class="leftHome">
+  <div class="login">
+    <div class="left-login">
       <div class="welcome">
         <h1 class="title">Olá,</h1>
         <p class="paragraph">
@@ -15,7 +15,7 @@
         <Button />
       </div>
     </div>
-    <div class="rightHome">
+    <div class="right-login">
       <div id="logo">
       <img src="@/assets/logo.png" alt="">
       </div>
@@ -30,7 +30,7 @@ import Button from "@/components/Button/Button.vue";
 
 export default {
   // eslint-disable-next-line
-  name: "Home",
+  name: "Login",
   components: {
     Inputs,
     Span,
@@ -42,5 +42,5 @@ export default {
 </script>
 
 <style lang="scss" scooped>
-@import "./Home.scss";
+@import "./Login.scss";
 </style>

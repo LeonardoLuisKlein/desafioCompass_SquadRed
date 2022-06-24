@@ -1,0 +1,137 @@
+.login {
+  box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%);
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  .left-login {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 50vw;
+
+    .welcome {
+      padding-bottom: 20px;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      width: 380px;
+      .title {
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        color: #e0e0e0;
+        font-size: 4em;
+      }
+      .paragraph {
+        font-size: 1em;
+        color: #e0e0e0;
+      }
+    }
+    .form {
+      width: 380px;
+      margin: 10vh auto;
+      h2 {
+        padding-bottom: 2vh;
+        font-size: 2em;
+        color: #e0e0e0;
+      }
+      #userInput {
+        background: url(../../assets/user.png) no-repeat right 10px center;
+      }
+      #pwInput {
+        background: url(../../assets/locked.png) no-repeat right 10px center;
+      }
+
+    }
+  }
+
+  .right-login {
+    background: url("/src/assets/laptop.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 50vw;
+
+    background-size: cover;
+    #logo {
+      display: flex;
+      justify-content: center;
+      img {
+        height: 80px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .left-login {
+    padding-top: 100px;
+    display: flex !important;
+    flex-flow: column nowrap !important;
+    justify-content: flex-end !important;
+
+    width: 100vw !important;
+    .welcome {
+      padding: 0px !important;
+      width: 70% !important;
+    }
+    .form {
+      margin: 8vh auto !important;
+      width: 70% !important;
+    }
+  }
+  .right-login {
+    width: 0vw !important;
+    img {
+      position: absolute;
+      height: 70px !important;
+      right: 22% !important;
+      width: 250px !important;
+      top: 10px !important;
+    }
+  }
+
+  @media (max-height: 700px) {
+    img {
+      width: 200px !important;
+      height: 60px !important;
+    }
+  }
+}
+
+//media q -- galaxy folder  
+@media (max-height: 660px) {
+  .left-login {
+    .welcome {
+      .title {
+        font-size: 3em !important;
+      }
+      .paragraph {
+        font-size: 0.8em !important;
+
+      }
+    }
+
+    .form {
+      h2 {
+        font-size: 2em !important;
+      }
+    }
+  }
+  img {
+    width: 200px !important;
+    height: 60px !important;
+  }
+}
+
+
+@media (max-width: 300px){
+  #logo img {
+    right: 8% !important;
+  }
+}
