@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     username: "admin",
-    pw: "1234567",
+    pw: "admin",
     name: "",
     password: "",
     loggedUser: false,
