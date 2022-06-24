@@ -9,7 +9,7 @@ export default new Vuex.Store({
     pw: "1234567",
     name: "",
     password: "",
-    access: false,
+    loggedUser: false,
     showSpan: false,
   },
   getters: {},

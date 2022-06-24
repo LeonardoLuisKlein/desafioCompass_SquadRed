@@ -20,4 +20,10 @@ html, body, #app {
   font-family: 'Poppins', sans-serif;
 }
 
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
 </style>
