@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p>asdasdasd</p>
     <Text msg="Nossa missão é" />
     <Text msg="Transformar o mundo" />
     <Text msg="construindo experiências digitais" />
