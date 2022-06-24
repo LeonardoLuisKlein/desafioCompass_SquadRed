@@ -1,6 +1,6 @@
 <template>
   <div>
-    
+    <Text /> 
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
     name: 'Succcess'
 }
 </script>
-
+  import Text from "@/components/Text/Text.vue";
 <style>
 
 </style>
