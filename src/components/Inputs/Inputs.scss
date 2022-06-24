@@ -10,7 +10,7 @@
     cursor: pointer;
     color: #E0E0E0;
     border: 1px solid #E0E0E0;
-    height: 3em;
+    height: 4.5em;
     padding: 15px;
     border-radius: 50px;
     background: transparent;
@@ -26,4 +26,9 @@
 }
 }
 
+@media (max-width: 768px) {
+  input {
+    height: 4em !important;
+  }
+}
 

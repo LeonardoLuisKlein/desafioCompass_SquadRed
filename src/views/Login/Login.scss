@@ -1,7 +1,7 @@
 .login {
   box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%);
   display: flex;
   justify-content: center;
@@ -9,10 +9,16 @@
   .left-login {
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    align-items: center;
     width: 50vw;
-
+    #logo1 {
+      img {
+        height: 70px;
+        visibility: hidden;
+      }
+    }
     .welcome {
+      padding-top: 150px;
       padding-bottom: 20px;
       margin: 0 auto;
       display: flex;
@@ -33,7 +39,7 @@
       }
     }
     .form {
-      width: 380px;
+      width: 370px;
       margin: 10vh auto;
       h2 {
         padding-bottom: 2vh;
@@ -46,7 +52,6 @@
       #pwInput {
         background: url(../../assets/locked.png) no-repeat right 10px center;
       }
-
     }
   }
 
@@ -69,32 +74,47 @@
 }
 
 @media (max-width: 768px) {
-  .left-login {
-    padding-top: 100px;
-    display: flex !important;
-    flex-flow: column nowrap !important;
-    justify-content: flex-end !important;
+  .login {
+    min-height: 750px;
+    .left-login {
+      height: 100%;
+      display: flex !important;
+      flex-flow: column nowrap !important;
+      justify-content: flex-start !important;
 
-    width: 100vw !important;
-    .welcome {
-      padding: 0px !important;
-      width: 70% !important;
+      #logo1 {
+        margin-top: 25px;
+        img {
+          visibility: visible !important;
+        }
+      }
+      .button-container {
+        padding-bottom: 50px;
+      }
+
+      width: 100vw !important;
+      .welcome {
+        padding-top: 60px !important;
+        width: 70% !important;
+      }
+      .form {
+        margin: 8vh auto !important;
+        width: 70% !important;
+      }
     }
-    .form {
-      margin: 8vh auto !important;
-      width: 70% !important;
+    .right-login {
+      display: none;
+      // img {
+      //   position: absolute;
+      //   height: 70px !important;
+      //   right: 22% !important;
+      //   width: 250px !important;
+      //   top: 10px !important;
+      // }
     }
   }
-  .right-login {
-    width: 0vw !important;
-    img {
-      position: absolute;
-      height: 70px !important;
-      right: 22% !important;
-      width: 250px !important;
-      top: 10px !important;
-    }
-  }
+
+
 
   @media (max-height: 700px) {
     img {
@@ -104,8 +124,8 @@
   }
 }
 
-//media q -- galaxy folder  
-@media (max-height: 660px) {
+//media ihpone se / galaxy fold
+@media (max-height: 760px) {
   .left-login {
     .welcome {
       .title {
@@ -113,13 +133,9 @@
       }
       .paragraph {
         font-size: 0.8em !important;
-
       }
-    }
-
-    .form {
-      h2 {
-        font-size: 2em !important;
+      .button-container {
+        padding-bottom: 0px;
       }
     }
   }
@@ -129,8 +145,7 @@
   }
 }
 
-
-@media (max-width: 300px){
+@media (max-width: 300px) {
   #logo img {
     right: 8% !important;
   }
