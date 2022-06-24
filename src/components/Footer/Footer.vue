@@ -12,7 +12,7 @@
 
 <script>
 import Timer from "./components/Timer/Timer.vue";
-import Text from "../Text/Text.vue";
+import Text from "../Text/Texts.vue";
 export default {
   // eslint-disable-next-line
   name: "Footer",
