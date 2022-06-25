@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="buttonsFooter">
-      <Buttons msgButton="Continuar Navegando" buttonsContainer="keepNav" />
+      <Buttons msgButton="Continuar Navegando" buttonsContainer="keepNav" :event='resetCountdown'/>
       <Buttons
         msgButton="Logout"
         buttonsContainer="logoutBut"
@@ -31,9 +31,10 @@
 </template>
 
 <script>
+import { resetCountdown } from "./components/Timer/Timer.vue";
 import Timer from "./components/Timer/Timer.vue";
 import Texts from "../Texts/Texts.vue";
-import Buttons from "./components/Buttons/Buttons";
+import Buttons from "./components/Buttons/Buttons.vue";
 export default {
   // eslint-disable-next-line
   name: "Footer",
@@ -46,6 +47,7 @@ export default {
       window.localStorage.setItem("password", "");
       this.$router.push("/");
     },
+    resetCountdown,
   },
 };
 </script>

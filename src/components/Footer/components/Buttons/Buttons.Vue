@@ -1,6 +1,8 @@
 <template>
   <div :class="buttonsContainer">
-    <button :class="classButton" :id="idButtons" @click="event" >{{ msgButton }}</button>
+    <button :class="classButton" :id="idButtons" @click="event">
+      {{ msgButton }}
+    </button>
   </div>
 </template>
 
@@ -15,7 +17,7 @@ export default {
     msgButton: String,
     event: {
       type: Function,
-      required: true
+      required: true,
     },
   },
 };
