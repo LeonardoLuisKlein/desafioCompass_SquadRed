@@ -43,4 +43,53 @@
       font-size: 0.875em;
     }
   }
+
+  .buttonsFooter {
+    display: flex;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 200px;
+
+    .keepNav {
+      height: 100%;
+      width: 130px;
+      display: flex;
+      button {
+        background: #ffffff;
+        flex-flow: row wrap;
+        font-size: 0.8em;
+        color: #c13316;
+        align-items: center;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+        border-left: none;
+        border-right: none;
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .logoutBut {
+      width: 130px;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      button {
+        border: none;
+        width: 100%;
+        font-weight: bold;
+        height: 100%;
+        background: transparent;
+        font-size: 0.8em;
+        color: #ffffff;
+        &:hover {
+          color: #c13316;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
 }

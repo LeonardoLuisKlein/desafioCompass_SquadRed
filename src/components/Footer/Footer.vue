@@ -19,16 +19,30 @@
         <Texts textClass="seconds" msg="seconds" />
       </div>
     </div>
+    <div class="buttonsFooter">
+      <Buttons msgButton="Continuar Navegando" buttonsContainer="keepNav"  />
+      <Buttons msgButton="Logout" buttonsContainer="logoutBut" :event="logout" />
+    </div>
   </footer>
 </template>
 
 <script>
 import Timer from "./components/Timer/Timer.vue";
 import Texts from "../Texts/Texts.vue";
+import Buttons from "./components/Buttons/Buttons";
 export default {
   // eslint-disable-next-line
   name: "Footer",
-  components: { Timer, Texts },
+  components: { Timer, Texts, Buttons },
+  methods: {
+    logout() {
+      this.$store.state.loggedUser = false;
+      window.localStorage.setItem("loggedUser", this.$store.state.loggedUser);
+      window.localStorage.setItem("name", "");
+      window.localStorage.setItem("password", "");
+      this.$router.push("/");
+    },
+  },
 };
 </script>
 
