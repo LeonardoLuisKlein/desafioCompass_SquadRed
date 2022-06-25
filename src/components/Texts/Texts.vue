@@ -1,5 +1,5 @@
 <template>
-  <div class="text">
+  <div :class="textContainer">
     <p type="text" :class="textClass">{{ msg }}</p>
   </div>
 </template>
@@ -20,11 +20,11 @@ export default {
       type: String,
       default: "null",
     },
+    textContainer:String
   },
 };
 </script>
 
 <style lang="scss" scooped>
-@import './Texts.scss'
+@import "./Texts.scss";
 </style>
-   

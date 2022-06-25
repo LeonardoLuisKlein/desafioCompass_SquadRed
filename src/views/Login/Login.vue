@@ -2,7 +2,7 @@
   <div class="login">
     <div class="left-login">
       <div id="logo1">
-        <img src="@/assets/logo.png" class="disable-select" alt="" />
+        <img draggable="false" src="@/assets/logo.png" class="disable-select" alt="" />
       </div>
       <div class="welcome disable-select"  >
         <h1 class="title">Olá,</h1>
@@ -20,7 +20,7 @@
     </div>
     <div class="right-login">
       <div id="logo" class="disable-select">
-        <img src="@/assets/logo.png" alt="" />
+        <img draggable="false" src="@/assets/logo.png" alt="" />
       </div>
     </div>
   </div>
