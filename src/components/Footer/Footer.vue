@@ -20,8 +20,12 @@
       </div>
     </div>
     <div class="buttonsFooter">
-      <Buttons msgButton="Continuar Navegando" buttonsContainer="keepNav"  />
-      <Buttons msgButton="Logout" buttonsContainer="logoutBut" :event="logout" />
+      <Buttons msgButton="Continuar Navegando" buttonsContainer="keepNav" />
+      <Buttons
+        msgButton="Logout"
+        buttonsContainer="logoutBut"
+        :event="logout"
+      />
     </div>
   </footer>
 </template>
