@@ -11,6 +11,7 @@ export default new Vuex.Store({
     password: "",
     loggedUser: false,
     showSpan: false,
+    timerState: 600,
   },
   getters: {},
   mutations: {

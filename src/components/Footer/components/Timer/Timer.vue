@@ -1,6 +1,6 @@
 <template>
   <div class="timer">
-    {{ countdown }}
+    {{ this.$store.state.timerState }}
   </div>
 </template>
 
@@ -8,27 +8,24 @@
 export default {
   // eslint-disable-next-line
   name: "Timer",
-  data() {
-    return {
-      countdown: 600,
-    };
-  },
+
   methods: {
     regressive() {
-      this.countdown--
-      if(this.countdown == 0){
-        this.$store.state.loggedUser = false
-        window.localStorage.setItem('loggedUser',this.$store.state.loggedUser )
-        window.localStorage.setItem('name', '' )
-        window.localStorage.setItem('password', '')
-        this.$router.push('/')
+      this.$store.state.timerState--;
+
+      if (this.$store.state.timerState == 0) {
+        this.$store.state.loggedUser = false;
+        window.localStorage.setItem("loggedUser", this.$store.state.loggedUser);
+        window.localStorage.setItem("name", "");
+        window.localStorage.setItem("password", "");
+        this.$router.push("/");
       }
     },
   },
   mounted() {
-    setInterval(() =>{
-        this.regressive()
-    }, 1000)
+    setInterval(() => {
+      this.regressive();
+    }, 1000);
   },
 };
 </script>
