@@ -1,10 +1,22 @@
 <template>
   <footer class="footer">
+    <div class="informative">
+      <Texts
+        textContainer="informative1"
+        textClass=""
+        msg="Essa janela do navegador é usada para manter sua sessão de autenticação ativa."
+      />
+      <Texts
+        textContainer="informative2"
+        textClass=""
+        msg="Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar."
+      />
+    </div>
     <div class="timerContainer">
-      <Text textClass="aplicattion" msg="Aplicattion refresh in" />
+      <Texts textClass="aplicattion" msg="Aplicattion refresh in" />
       <div class="timerSeconds">
         <Timer />
-        <p class="seconds">seconds</p>
+        <Texts textClass="seconds" msg="seconds" />
       </div>
     </div>
   </footer>
@@ -12,11 +24,11 @@
 
 <script>
 import Timer from "./components/Timer/Timer.vue";
-import Text from "../Text/Text.vue";
+import Texts from "../Texts/Texts.vue";
 export default {
   // eslint-disable-next-line
   name: "Footer",
-  components: { Timer, Text },
+  components: { Timer, Texts },
 };
 </script>
 
