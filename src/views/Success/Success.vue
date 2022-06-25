@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <Texts msg="Nossa missão é" />
     <Texts msg="Transformar o mundo" />
     <Texts msg="construindo experiências digitais" />
@@ -11,12 +12,14 @@
 <script>
 import Texts from "@/components/Texts/Texts.vue";
 import Footer from "@/components/Footer/Footer.vue";
+import Header from "@/components/Header/Header.vue"
 export default {
   // eslint-disable-next-line
   name: "Success",
   components: {
     Texts,
     Footer,
+    Header
 
   },
 };
