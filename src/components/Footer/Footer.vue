@@ -20,7 +20,11 @@
       </div>
     </div>
     <div class="buttonsFooter">
-      <Buttons msgButton="Continuar Navegando" buttonsContainer="keepNav" :event='resetCountdown'/>
+      <Buttons
+        msgButton="Continuar Navegando"
+        buttonsContainer="keepNav"
+        :event="resetCountdown"
+      />
       <Buttons
         msgButton="Logout"
         buttonsContainer="logoutBut"
@@ -31,7 +35,6 @@
 </template>
 
 <script>
-import { resetCountdown } from "./components/Timer/Timer.vue";
 import Timer from "./components/Timer/Timer.vue";
 import Texts from "../Texts/Texts.vue";
 import Buttons from "./components/Buttons/Buttons.vue";
@@ -47,7 +50,12 @@ export default {
       window.localStorage.setItem("password", "");
       this.$router.push("/");
     },
-    resetCountdown,
+    resetCountdown() {
+      this.$store.state.timerState = 600;
+      const date = new Date().toLocaleDateString('pt-BR')
+
+      console.log(date);
+    },
   },
 };
 </script>

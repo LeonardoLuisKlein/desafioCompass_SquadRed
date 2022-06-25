@@ -1,26 +1,19 @@
 <template>
   <div class="timer">
-    {{ countdown }}
+    {{ this.$store.state.timerState }}
   </div>
 </template>
 
 <script>
-export function resetCountdown() {
-  this.countdown = 500;
-  console.log('click');
-}
 export default {
   // eslint-disable-next-line
   name: "Timer",
-  data() {
-    return {
-      countdown: 600,
-    };
-  },
+
   methods: {
     regressive() {
-      this.countdown--;
-      if (this.countdown == 0) {
+      this.$store.state.timerState--;
+
+      if (this.$store.state.timerState == 0) {
         this.$store.state.loggedUser = false;
         window.localStorage.setItem("loggedUser", this.$store.state.loggedUser);
         window.localStorage.setItem("name", "");
