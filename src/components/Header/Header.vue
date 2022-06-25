@@ -1,10 +1,12 @@
 <template>
   <div class="header">
    <div>
-    <img src="@/assets/logo.png" alt="">
+    <img src="@/assets/compassuol-logo-black.png" alt="">
    </div>
     <TimeDate />
+    <div>
 
+    </div>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="success">
     <Header />
     <Texts msg="Nossa missão é" />
     <Texts msg="Transformar o mundo" />
