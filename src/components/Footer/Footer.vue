@@ -52,9 +52,6 @@ export default {
     },
     resetCountdown() {
       this.$store.state.timerState = 600;
-      const date = new Date().toLocaleDateString('pt-BR')
-
-      console.log(date);
     },
   },
 };
