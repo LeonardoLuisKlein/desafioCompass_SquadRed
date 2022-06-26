@@ -23,7 +23,9 @@ export default {
       let date = new Date();
       let hours = date.getHours();
       let minutes = date.getMinutes();
-      let clock = `${hours <= 9 ? '0' :''}${hours}:${minutes <= 9 ? '0' : ''}${minutes}`;
+      let clock = `${hours <= 9 ? "0" : ""}${hours}:${
+        minutes <= 9 ? "0" : ""
+      }${minutes}`;
       this.clock = clock;
 
       const months = [
@@ -51,16 +53,10 @@ export default {
       ];
 
       let day = date.getDay();
-      console.log(day);
-
       let month = date.getMonth();
-      console.log(month);
-
       let year = date.getFullYear();
-      console.log(year);
-
       let actualDate = `${days[day]}, ${day} de ${months[month]} de ${year}`;
-      this.actualDate = actualDate
+      this.actualDate = actualDate;
     },
   },
   created() {
@@ -71,5 +67,5 @@ export default {
 };
 </script>
 <style lang="scss" scooped>
-@import './TimeDate.scss'
+@import "./TimeDate.scss";
 </style>
