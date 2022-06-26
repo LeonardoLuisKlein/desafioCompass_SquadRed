@@ -1,7 +1,7 @@
 <template>
   <div class="header">
    <div>
-    <img src="@/assets/compassuol-logo-black.png" alt="">
+    <img draggable="false" src="@/assets/compassuol-logo-black.png" alt="logo-compass" id="compass-black">
    </div>
     <TimeDate />
     <div>

@@ -31,4 +31,8 @@ html, body, #app {
   -ms-user-select: none;      
   user-select: none;
 }
+
+button {
+  cursor: pointer;
+}
 </style>

@@ -13,3 +13,9 @@
         font-size: 0.875em;
      }
 }
+
+@media(max-width: 768px){
+   .timeDate {
+      display: none;
+   }
+}

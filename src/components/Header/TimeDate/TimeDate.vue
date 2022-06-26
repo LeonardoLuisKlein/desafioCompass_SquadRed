@@ -1,5 +1,5 @@
 <template>
-  <div class="timeDate">
+  <div draggable="false" class="timeDate disable-select">
     <p id="clock">{{ clock }}</p>
     <p id="date">{{ actualDate }}</p>
   </div>
