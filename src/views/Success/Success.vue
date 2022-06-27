@@ -24,7 +24,7 @@ export default {
   mounted() {
     if (!this.$store.state.loggedUser) {
       console.log("não pode acessar deslogado");
-      this.$router.push('/')
+      this.$router.push('/ErrorV')
     }
   },
 };
