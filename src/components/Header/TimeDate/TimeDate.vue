@@ -14,7 +14,8 @@ export default {
       actualDate: "",
       hours: "",
       minutes: "",
-      day: "",
+      dayWeek: "",
+      dayMonth: "",
       month: "",
     };
   },
@@ -44,19 +45,21 @@ export default {
         "dezembro",
       ];
       const days = [
+        "domingo",
         "segunda-feira",
         "terça-feira",
         "quarta-feira",
         "quinta-feira",
         "sexta-feira",
         "sábado",
-        "domingo",
       ];
 
-      let day = date.getDay();
+      let dayMonth = date.getDate();
+      let dayWeek = date.getDay();
       let month = date.getMonth();
       let year = date.getFullYear();
-      let actualDate = `${days[day]}, ${day} de ${months[month]} de ${year}`;
+
+      let actualDate = `${days[dayWeek]}, ${dayMonth} de ${months[month]} de ${year}`;
       this.actualDate = actualDate;
     },
   },
