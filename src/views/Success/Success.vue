@@ -12,19 +12,24 @@
 <script>
 import Texts from "@/components/Texts/Texts.vue";
 import Footer from "@/components/Footer/Footer.vue";
-import Header from "@/components/Header/Header.vue"
+import Header from "@/components/Header/Header.vue";
 export default {
   // eslint-disable-next-line
   name: "Success",
   components: {
     Texts,
     Footer,
-    Header
-
+    Header,
+  },
+  mounted() {
+    if (!this.$store.state.loggedUser) {
+      console.log("não pode acessar deslogado");
+      this.$router.push('/')
+    }
   },
 };
 </script>
 
 <style lang="scss" scooped>
-@import './Success.scss'
+@import "./Success.scss";
 </style>
