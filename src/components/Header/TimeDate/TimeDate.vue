@@ -21,6 +21,7 @@ export default {
   methods: {
     getHourDate() {
       let date = new Date();
+      console.log(date);
       let hours = date.getHours();
       let minutes = date.getMinutes();
       let clock = `${hours <= 9 ? "0" : ""}${hours}:${

@@ -1,11 +1,11 @@
 <template>
   <div class="header">
    <div>
-    <img draggable="false" src="@/assets/compassuol-logo-black.png" alt="logo-compass" id="compass-black">
+    <img draggable="false" src="@/assets/compassuol-logo-black.png" alt="logo-compass" id="compass-black" class="disable-select">
    </div>
     <TimeDate />
     <div>
-
+        
     </div>
   </div>
 </template>
