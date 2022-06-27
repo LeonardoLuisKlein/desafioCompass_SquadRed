@@ -25,4 +25,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scooped>
+@import './Success.scss'
+</style>

@@ -2,21 +2,24 @@
   <footer class="footer">
     <div class="informative">
       <Texts
-        textContainer="informative1"
+        textContainer="informative1 disable-select"
         textClass=""
         msg="Essa janela do navegador é usada para manter sua sessão de autenticação ativa."
       />
       <Texts
-        textContainer="informative2"
+        textContainer="informative2 disable-select"
         textClass=""
         msg="Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar."
       />
     </div>
     <div class="timerContainer">
-      <Texts textClass="aplicattion" msg="Aplicattion refresh in" />
-      <div class="timerSeconds">
+      <Texts
+        textClass="aplicattion disable-select"
+        msg="Aplicattion refresh in"
+      />
+      <div class="timerSeconds disable-select">
         <Timer />
-        <Texts textClass="seconds" msg="seconds" />
+        <Texts textClass="seconds disable-select" msg="seconds" />
       </div>
     </div>
     <div class="buttonsFooter">

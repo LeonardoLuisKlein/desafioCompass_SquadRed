@@ -74,7 +74,6 @@
     .logoutBut {
       width: 130px;
       display: flex;
-      cursor: pointer;
       align-items: center;
       justify-content: center;
       button {
@@ -89,6 +88,34 @@
           color: #c13316;
           transition: 0.5s;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .informative {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    background: none;
+    .timerContainer {
+      display: none !important;
+    }
+    .buttonsFooter {
+      width: 100%;
+      .keepNav {
+        background: #ffffff;
+        justify-content: center;
+        order: 1;
+        width: 73%;
+      }
+      .logoutBut {
+        background: linear-gradient(90.16deg, #33383d 0%, #1c1d20 100%);
+        width: 27%;
       }
     }
   }

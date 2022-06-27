@@ -1,5 +1,5 @@
 <template>
-  <div class="timeDate">
+  <div draggable="false" class="timeDate disable-select">
     <p id="clock">{{ clock }}</p>
     <p id="date">{{ actualDate }}</p>
   </div>
@@ -21,6 +21,7 @@ export default {
   methods: {
     getHourDate() {
       let date = new Date();
+      console.log(date);
       let hours = date.getHours();
       let minutes = date.getMinutes();
       let clock = `${hours <= 9 ? "0" : ""}${hours}:${
