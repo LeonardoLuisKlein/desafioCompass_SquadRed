@@ -49,7 +49,7 @@ export default {
     logout() {
       this.$store.state.loggedUser = false;
       window.localStorage.setItem("loggedUser", this.$store.state.loggedUser);
-      window.localStorage.setItem("name", "");
+      window.localStorage.setItem("username", "");
       window.localStorage.setItem("password", "");
       this.$router.push("/");
     },
