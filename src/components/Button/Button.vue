@@ -35,7 +35,6 @@ export default {
         window.localStorage.setItem("loggedUser", this.$store.state.loggedUser);
         document.getElementById('userInput').style.borderColor = '#E9B425'
         document.getElementById('pwInput').style.borderColor = '#E9B425'
-
       }
     },
   },
