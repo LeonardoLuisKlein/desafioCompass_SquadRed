@@ -1,16 +1,23 @@
 <template>
   <div>
-
+    <Weather />
   </div>
 </template>
 
 <script>
+import Weather from "../../components/Header/Weather/Weather.vue";
+
 export default {
     // eslint-disable-next-line
-    name: 'Succcess'
+    name: 'Succcess',
+    components: {
+    Weather
 }
+}
+
+
+
 </script>
-  import Text from "@/components/Text/Text.vue";
 <style>
 
 </style>
