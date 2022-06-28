@@ -22,20 +22,19 @@ export default {
   },
   methods: {
     register() {
-      const nameStorage = window.localStorage.getItem("name");
+      const usernameStorage = window.localStorage.getItem("username");
       const pwStorage = window.localStorage.getItem("password");
-      if (nameStorage && pwStorage) {
+      if (usernameStorage && pwStorage) {
         this.$store.state.loggedUser = true;
         window.localStorage.setItem("loggedUser", this.$store.state.loggedUser);
         document.getElementById('spanId').style.visibility = 'hidden'
-        this.$router.push('/Sucess')
+        this.$router.push('/Success')
       } else {
         document.getElementById('spanId').style.visibility = 'visible'
         this.$store.state.loggedUser = false;
         window.localStorage.setItem("loggedUser", this.$store.state.loggedUser);
         document.getElementById('userInput').style.borderColor = '#E9B425'
         document.getElementById('pwInput').style.borderColor = '#E9B425'
-
       }
     },
   },

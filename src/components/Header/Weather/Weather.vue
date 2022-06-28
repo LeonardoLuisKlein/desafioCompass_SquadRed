@@ -1,24 +1,30 @@
 <template>
   <div>
-    <h1>Passo Fundo - RS</h1>
+    <Title type="h1" :tMensage="`${local} - RS`"/>
     <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" />
-    <h1>22°</h1>
+    <Title type="h1" :tMensage="`${temp}°`"/>
   </div>
 </template>
 
 <script>
+import Title from '@/components/Title/Title.vue'
 
 export default {
     // eslint-disable-next-line
     name: "Weather",
+    components: {
+      Title,
+    },
     data(){
       return{
-        imageName: "sun",
+        imageName: "raining",
         local: "",
         region: "",
         lat: "",
         long: "",
         dadosLocal: "",
+        addIcon: "",
+        temp: ""
       }
     },
     methods: {
@@ -39,11 +45,35 @@ export default {
               console.log(this.temp)
               console.log(this.local)
               console.log(this.state)
+              this.imageName = this.getIconWeather(
+                    dados.current.condition.text
+                  );
             })
           })
  
         }
         
+    },
+
+    getIconWeather(weather){
+      let icon
+
+      if (weather.includes("thunder")){
+        icon = "storm";
+      } 
+      else if (weather.includes("Sun") || weather.includes("Clear")){
+        icon = "sun";
+      } 
+      else if (weather.includes("Fog") || weather.includes("Mist")){
+        icon = "cloud";
+      } 
+      else if (weather.includes("Cloudy") || weather.includes("Overcast") || weather.includes("cloudy")){
+        icon = "cloudy";
+      } 
+      else if (weather.includes("rain") || weather.includes("drizzle")){
+        icon = "raining";
+      }
+      return icon
     }
 
 },
@@ -54,6 +84,6 @@ mounted() {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 @import "./Weather.scss";
 </style>

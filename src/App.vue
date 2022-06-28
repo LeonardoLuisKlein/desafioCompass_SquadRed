@@ -1,10 +1,15 @@
 <template>
   <div id="app">
-    
-
     <router-view/>
   </div>
 </template>
+
+
+<script>
+export default {
+  name: 'App'
+}
+</script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -25,5 +30,9 @@ html, body, #app {
   -moz-user-select: none;    
   -ms-user-select: none;      
   user-select: none;
+}
+
+button {
+  cursor: pointer;
 }
 </style>

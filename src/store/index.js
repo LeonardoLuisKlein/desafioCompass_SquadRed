@@ -5,27 +5,26 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    username: "admin",
-    pw: "1234567",
-    name: "",
+    username: "",
     password: "",
     loggedUser: false,
     showSpan: false,
+    timerState: 600,
   },
   getters: {},
   mutations: {
 
-    setName(state, name) {
-      state.name = name;
-      if (name === this.state.username) {
-        window.localStorage.setItem("name", name);
+    setName(state, username) {
+      state.username = username;
+      if (/^([a-zA-Z]{2,}\.[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}?)/.test(username)) {
+        window.localStorage.setItem("username", username);
       } else {
-        window.localStorage.setItem("name", "");
+        window.localStorage.setItem("username", "");
       }
     },
     setPassword(state, password) {
       state.password = password;
-      if (password === this.state.pw) {
+      if (/^[0-9]{6,9}$/.test(password)) {
         window.localStorage.setItem("password", password);
       } else {
         window.localStorage.setItem("password", "");
@@ -33,8 +32,8 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    setName({ commit }, name) {
-      commit("setName", name);
+    setName({ commit }, username) {
+      commit("setName", username);
     },
     setPassword({ commit }, password) {
       commit("setPassword", password);

@@ -1,0 +1,28 @@
+.right-login {
+  background: url("/src/assets/laptop.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50vw;
+
+  background-size: cover;
+  #logo {
+    display: flex;
+    justify-content: center;
+    img {
+      height: 80px;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .right-login {
+    display: none;
+  }
+}
+@media (max-height: 700px) {
+  img {
+    width: 200px !important;
+    height: 60px !important;
+  }
+}

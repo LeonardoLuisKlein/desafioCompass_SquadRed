@@ -1,0 +1,21 @@
+.timeDate {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: #222222;
+     #clock{
+        font-weight: 700;
+        font-size: 7em;
+        height: 135px;
+
+     }
+     #date{
+        font-size: 0.875em;
+     }
+}
+
+@media(max-width: 768px){
+   .timeDate {
+      display: none;
+   }
+}

@@ -1,0 +1,122 @@
+.footer {
+  height: 110px;
+  width: 100%;
+  background: linear-gradient(90.16deg, #33383d 0%, #1c1d20 100%);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+
+  .informative {
+    width: 50%;
+    color: #ffffff;
+    font-size: 0.75em;
+    text-align: right;
+    padding-right: 30px;
+    border-right: 1px solid #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .timerContainer {
+    height: 100%;
+    width: 165px !important;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    width: 20%;
+    .aplicattion {
+      width: 90px;
+      margin-right: 20px;
+      font-size: 0.875em;
+      text-align: right;
+    }
+    .timerSeconds {
+      width: 70px;
+      flex-flow: row wrap;
+      display: flex;
+      justify-content: center;
+      padding-left: 10px;
+      padding-bottom: 15px;
+    }
+    .seconds {
+      font-size: 0.875em;
+    }
+  }
+
+  .buttonsFooter {
+    display: flex;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 200px;
+
+    .keepNav {
+      height: 100%;
+      width: 130px;
+      display: flex;
+      button {
+        background: #ffffff;
+        flex-flow: row wrap;
+        font-size: 0.8em;
+        color: #c13316;
+        align-items: center;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+        border-left: none;
+        border-right: none;
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .logoutBut {
+      width: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        border: none;
+        width: 100%;
+        font-weight: bold;
+        height: 100%;
+        background: transparent;
+        font-size: 0.8em;
+        color: #ffffff;
+        &:hover {
+          color: #c13316;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .informative {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    background: none;
+    .timerContainer {
+      display: none !important;
+    }
+    .buttonsFooter {
+      width: 100%;
+      .keepNav {
+        background: #ffffff;
+        justify-content: center;
+        order: 1;
+        width: 73%;
+      }
+      .logoutBut {
+        background: linear-gradient(90.16deg, #33383d 0%, #1c1d20 100%);
+        width: 27%;
+      }
+    }
+  }
+}
