@@ -10,6 +10,7 @@ export default new Vuex.Store({
     loggedUser: false,
     showSpan: false,
     timerState: 600,
+    isLoaded: true,
   },
   getters: {},
   mutations: {
