@@ -9,7 +9,12 @@
 <script>
 export default {
   name: "ErrorV",
+  mounted(){
+    this.$store.state.loggedUser = false
+    window.localStorage.getItem('loggedUser', this.$store.state.loggedUser)
+  }
 };
+
 </script>
 
 <style lang="scss" scooped>
