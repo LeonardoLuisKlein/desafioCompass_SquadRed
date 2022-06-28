@@ -1,13 +1,12 @@
 <template>
   <div>
-    <h1>Passo Fundo  RS</h1>
+    <h1>Passo Fundo - RS</h1>
     <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" />
     <h1>22°</h1>
   </div>
 </template>
 
 <script>
-import apiLocation from "@/services/api"
 
 export default {
     // eslint-disable-next-line
@@ -15,27 +14,43 @@ export default {
     data(){
       return{
         imageName: "sun",
-        city: "",
+        local: "",
         region: "",
         lat: "",
         long: "",
-        locationData: ""
+        dadosLocal: "",
       }
     },
     methods: {
-      getWeather(){
-    apiLocation.get().then((response) => {
-        this.locationData = response.data
-        console.log(this.locationData)
-    })    
-    
-}
+    getWeather(){
+        if('geolocation' in navigator){
+            navigator.geolocation.getCurrentPosition((position) => {
+              let lat = position.coords.latitude;
+              let long = position.coords.longitude;
+
+            fetch(
+              `http://api.weatherapi.com/v1/current.json?key=b3972d7c329b490c9c1175956222706&q=${lat},${long}`
+            )
+            .then((resposta) => resposta.json())
+            .then((dados) => {
+              this.local = dados.location.name
+              this.state = dados.location.region
+              this.temp = dados.current.temp_c.toFixed(0)
+              console.log(this.temp)
+              console.log(this.local)
+              console.log(this.state)
+            })
+          })
+ 
+        }
+        
+    }
 
 },
-mounted(){
-    this.getWeather()
-}
 
+mounted() {
+    this.getWeather();
+  }
 }
 </script>
 
