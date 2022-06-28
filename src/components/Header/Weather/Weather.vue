@@ -1,13 +1,14 @@
 <template>
   <div>
-    <Title type="h1" :tMensage="`${local} - RS`"/>
+    <Title type="h1" nameClass="cityTitle" :tMensage="`${local} - RS`"/>
     <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" />
-    <Title type="h1" :tMensage="`${temp}°`"/>
+    <Title type="h1" nameClass="temperatureContent" :tMensage="`${temp}°`"/>
   </div>
 </template>
 
 <script>
 import Title from '@/components/Title/Title.vue'
+import abreviationStates from '@/assets/abreviationStates.js'
 
 export default {
     // eslint-disable-next-line
