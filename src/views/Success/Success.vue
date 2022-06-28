@@ -1,7 +1,7 @@
 <template>
   <div class="success">
-    <PageLoader v-if="isLoaded" />
-    <div v-else>
+    <PageLoader v-show="this.$store.state.isLoaded" />
+    <div v-show="!this.$store.state.isLoaded">
       <Header />
       <Texts msg="Nossa missão é" />
       <Texts msg="Transformar o mundo" />
@@ -20,11 +20,6 @@ import PageLoader from "@/components/PageLoader/PageLoader.vue";
 export default {
   // eslint-disable-next-line
   name: "Success",
-  data() {
-    return {
-      isLoaded: false,
-    };
-  },
   components: {
     Texts,
     Footer,
@@ -34,11 +29,10 @@ export default {
   mounted() {
     if (!this.$store.state.loggedUser) {
       this.$router.push("/ErrorV");
-      this.$store.state.loggedUser = false  
-      window.localStorage.setItem('loggedUser', false)
-          
+      this.$store.state.loggedUser = false;
+      window.localStorage.setItem("loggedUser", false);
     }
-    console.log(document.readyState);
+
     // document.onreadystatechange = () => {
     //   if (document.readyState == "complete") {
     //     this.isLoaded = true;

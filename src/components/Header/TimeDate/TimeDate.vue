@@ -60,6 +60,7 @@ export default {
 
       let actualDate = `${days[dayWeek]}, ${dayMonth} de ${months[month]} de ${year}`;
       this.actualDate = actualDate;
+      this.$store.state.isLoaded = false;
     },
   },
   created() {
