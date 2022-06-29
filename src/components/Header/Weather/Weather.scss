@@ -2,9 +2,14 @@ div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 img {
     height: 45px;
+    width: 45px;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 }

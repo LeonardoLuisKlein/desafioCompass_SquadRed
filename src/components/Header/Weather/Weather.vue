@@ -1,14 +1,13 @@
 <template>
   <div>
-    <Title type="h1" nameClass="cityTitle" :tMensage="`${local} - RS`"/>
-    <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" />
+    <Title type="h1" nameClass="cityTitle" :tMensage="`${local} - ${state}`"/>
+    <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" class="weatherIcon"/>
     <Title type="h1" nameClass="temperatureContent" :tMensage="`${temp}°`"/>
   </div>
 </template>
 
 <script>
 import Title from '@/components/Title/Title.vue'
-import abreviationStates from '@/assets/abreviationStates.js'
 
 export default {
     // eslint-disable-next-line
@@ -18,14 +17,16 @@ export default {
     },
     data(){
       return{
-        imageName: "raining",
+        imageName: "sun",
         local: "",
         region: "",
         lat: "",
         long: "",
         dadosLocal: "",
         addIcon: "",
-        temp: ""
+        temp: "",
+        state: "",
+        dadosCity: "",
       }
     },
     methods: {
@@ -34,6 +35,16 @@ export default {
             navigator.geolocation.getCurrentPosition((position) => {
               let lat = position.coords.latitude;
               let long = position.coords.longitude;
+              console.log(lat, long)
+
+              fetch(
+                "http://ip-api.com/json/?fields=city,region,lat,lon"
+              )
+              .then((resposta) => resposta.json())
+              .then((dadosCity) => {
+                this.state = dadosCity.region
+             
+              
 
             fetch(
               `http://api.weatherapi.com/v1/current.json?key=b3972d7c329b490c9c1175956222706&q=${lat},${long}`
@@ -41,19 +52,15 @@ export default {
             .then((resposta) => resposta.json())
             .then((dados) => {
               this.local = dados.location.name
-              this.state = dados.location.region
               this.temp = dados.current.temp_c.toFixed(0)
               console.log(this.temp)
               console.log(this.local)
-              console.log(this.state)
-              this.imageName = this.getIconWeather(
-                    dados.current.condition.text
-                  );
+              this.imageName = this.getIconWeather(dados.current.condition.text);
+              console.log(dados)
+              })
             })
           })
- 
-        }
-        
+        }     
     },
 
     getIconWeather(weather){
