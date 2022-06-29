@@ -4,7 +4,7 @@
       <img
         draggable="false"
         src="@/assets/logo.png"
-        class="disable-select"
+        class="img-1 disable-select"
         alt=""
       />
     </div>
