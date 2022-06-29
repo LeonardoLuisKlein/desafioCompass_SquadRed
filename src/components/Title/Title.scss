@@ -18,4 +18,32 @@ div{
         text-align: right;
         color: #C12D18;
     }
+
+    .cityTitle{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        color: #222222;
+    }
+
+    .temperatureContent{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 72px;
+        text-align: center;
+        color: #222222;
+        display: flex;
+    }
+
+    .disable-select {
+        -webkit-user-select: none;  
+        -moz-user-select: none;    
+        -ms-user-select: none;      
+        user-select: none;
+      }
 }
