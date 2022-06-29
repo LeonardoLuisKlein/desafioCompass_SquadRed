@@ -1,5 +1,5 @@
 <template>
-  <div  class="erro disable-select">
+  <div class="erro disable-select">
     <h1>Error 401</h1>
     <h2>Unauthorized Access</h2>
     <h3>You must be logged in to access this page.</h3>
@@ -9,12 +9,13 @@
 <script>
 export default {
   name: "ErrorV",
-  mounted(){
-    this.$store.state.loggedUser = false
-    window.localStorage.getItem('loggedUser', this.$store.state.loggedUser)
-  }
+  mounted() {
+    this.$store.state.loggedUser = false;
+    window.localStorage.getItem("loggedUser", this.$store.state.loggedUser);
+    window.localStorage.setItem("username", "");
+    window.localStorage.setItem("password", "");
+  },
 };
-
 </script>
 
 <style lang="scss" scooped>
