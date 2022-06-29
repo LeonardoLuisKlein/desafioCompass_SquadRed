@@ -39,4 +39,11 @@ div{
         color: #222222;
         display: flex;
     }
+
+    .disable-select {
+        -webkit-user-select: none;  
+        -moz-user-select: none;    
+        -ms-user-select: none;      
+        user-select: none;
+      }
 }

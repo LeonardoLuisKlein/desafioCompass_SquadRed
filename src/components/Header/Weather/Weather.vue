@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Title type="h1" nameClass="cityTitle" :tMensage="`${local} - ${state}`"/>
+    <Title type="h1" nameClass="cityTitle disable-select" :tMensage="`${local} - ${state}`"/>
     <div class="tempContainer">
-    <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" class="weatherIcon"/>
-    <Title type="h1" nameClass="temperatureContent" :tMensage="`${temp}°`"/>
+    <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" class="weatherIcon disable-select"/>
+    <Title type="h1" nameClass="temperatureContent disable-select" :tMensage="`${temp}°`"/>
     </div>
   </div>
 </template>
