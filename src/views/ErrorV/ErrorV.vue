@@ -3,7 +3,7 @@
     <h1>Error 401</h1>
     <h2>Unauthorized Access</h2>
     <h3>You must be logged in to access this page.</h3>
-    <h3>You will be redirected in {{ time }} s...</h3>
+    <h3>You will be redirect in {{ time }} s...</h3>
   </div>
 </template>
 
