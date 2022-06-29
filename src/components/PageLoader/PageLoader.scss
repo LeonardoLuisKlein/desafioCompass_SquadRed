@@ -1,4 +1,4 @@
-$colors: #8CC271, #69BEEB, #F5AA39, #E9643B;
+$colors: #ff2d04, #FFFFFF, #ff2d04, #ffffff;
 // -----------------------------------------------------
 .pageLoader {
   display: flex;
@@ -9,11 +9,11 @@ $colors: #8CC271, #69BEEB, #F5AA39, #E9643B;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #333;
+  background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%);
   z-index: 999;
 }
 // -----------------------------------------------------
-.cube{
+.cube {
   width: 40px;
   height: 40px;
   margin-right: 10px;
@@ -26,7 +26,7 @@ $colors: #8CC271, #69BEEB, #F5AA39, #E9643B;
     animation: left 1s infinite;
   }
   &:last-child {
-    animation: right 1s infinite .5s;
+    animation: right 1s infinite 0.5s;
   }
 }
 // -----------------------------------------------------
@@ -35,7 +35,7 @@ $colors: #8CC271, #69BEEB, #F5AA39, #E9643B;
     transform: translateX(-60px);
   }
   50% {
-    transform: translateX(0);      
+    transform: translateX(0);
   }
 }
 @keyframes right {

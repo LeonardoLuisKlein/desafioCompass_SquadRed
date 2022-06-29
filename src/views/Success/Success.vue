@@ -32,7 +32,6 @@ export default {
       this.$store.state.loggedUser = false;
       window.localStorage.setItem("loggedUser", false);
     }
-
     // document.onreadystatechange = () => {
     //   if (document.readyState == "complete") {
     //     this.isLoaded = true;
