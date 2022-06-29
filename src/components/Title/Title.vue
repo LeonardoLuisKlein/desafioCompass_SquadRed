@@ -1,9 +1,9 @@
 <template>
   <div class="title">
-    <h1 :class="nameClass" v-if="type === 'h1'">{{ tMensage }}</h1>
-    <h2 :class="nameClass" v-else-if="type === 'h2'">{{ tMensage }}</h2>
-    <h3 :class="nameClass" v-else-if="type === 'h3'">{{ tMensage }}</h3>
-    <h4 :class="nameClass" v-else-if="type === 'h4'">{{ tMensage }}</h4>
+    <h1 :class="nameClassSmall" v-if="type === 'h1'">{{ tMensage }}</h1>
+    <h2 :class="nameClassBig" v-else-if="type === 'h2'">{{ tMensage }}</h2>
+    <h3 :class="nameClassBig" v-else-if="type === 'h3'">{{ tMensage }}</h3>
+    <h4 :class="nameClassBig" v-else-if="type === 'h4'">{{ tMensage }}</h4>
     <h5 v-else-if="type === 'h5'">{{ tMensage }}</h5>
     <h6 v-else-if="type === 'h6'">{{ tMensage }}</h6>
   </div>
