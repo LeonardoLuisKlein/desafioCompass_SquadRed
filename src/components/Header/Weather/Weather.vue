@@ -1,8 +1,10 @@
 <template>
   <div>
     <Title type="h1" nameClass="cityTitle" :tMensage="`${local} - ${state}`"/>
+    <div class="tempContainer">
     <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" class="weatherIcon"/>
     <Title type="h1" nameClass="temperatureContent" :tMensage="`${temp}°`"/>
+    </div>
   </div>
 </template>
 
