@@ -1,33 +1,34 @@
 <template>
   <div>
-    <Title type="h1" nameClass="cityTitle disable-select" :tMensage="`${local} - ${state}`"/>
+    <div class="cityTitle disable-select">
+    <p >{{tMensage=`${local} - ${state}`}}</p>
+    </div>
     <div class="tempContainer">
-    <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" class="weatherIcon disable-select"/>
-    <Title type="h1" nameClass="temperatureContent disable-select" :tMensage="`${temp}°`"/>
+      <div class="teste">
+        <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" class="weatherIcon disable-select"/>
+      </div>
+    <div class="temperatureContent disable-select">
+    <p>{{tMensage=`${temp}°`}}</p>
+        </div>
     </div>
   </div>
 </template>
 
 <script>
-import Title from '@/components/Title/Title.vue'
-
 export default {
     // eslint-disable-next-line
     name: "Weather",
-    components: {
-      Title,
-    },
     data(){
       return{
         imageName: "sun",
-        local: "",
+        local: "Três Arroios",
         region: "",
         lat: "",
         long: "",
         dadosLocal: "",
         addIcon: "",
-        temp: "",
-        state: "",
+        temp: "28",
+        state: "RS",
         dadosCity: "",
       }
     },
@@ -45,18 +46,18 @@ export default {
               .then((resposta) => resposta.json())
               .then((dadosCity) => {
                 this.state = dadosCity.region
-             
-              
+                this.local = dadosCity.city
+                this.lat = dadosCity.lat
+                this.long = dadosCity.lon
+                console.log(this.lat, this.long)
 
             fetch(
-              `http://api.weatherapi.com/v1/current.json?key=b3972d7c329b490c9c1175956222706&q=${lat},${long}`
+              `http://api.weatherapi.com/v1/current.json?key=b3972d7c329b490c9c1175956222706&q=${this.lat},${this.long}`
             )
             .then((resposta) => resposta.json())
             .then((dados) => {
-              this.local = dados.location.name
               this.temp = dados.current.temp_c.toFixed(0)
               console.log(this.temp)
-              console.log(this.local)
               this.imageName = this.getIconWeather(dados.current.condition.text);
               console.log(dados)
               })
