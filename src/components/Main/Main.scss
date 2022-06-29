@@ -5,7 +5,7 @@
   overflow-y: hidden;
   overflow-x: hidden;
   height: 75vh;
-  width: 95vw;
+  width: 100vw;
 }
 
 .mainLeft {
@@ -22,6 +22,7 @@
   text-align: end;
   align-content: center;
   padding-top: 150px;
+  padding-right: 200px;
 
 }
 
@@ -49,7 +50,7 @@
   font-weight: 400;
 }
 
-@media (max-width: 1800px) {
+@media (max-width: 1845px) {
   .mainRight {
     padding-right: 50px;
     .sucessTitleSmall {

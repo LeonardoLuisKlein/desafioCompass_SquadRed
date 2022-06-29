@@ -7,8 +7,8 @@
       <div class="teste">
         <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" class="weatherIcon disable-select"/>
       </div>
-    <div class="temperatureContent disable-select">
-    <p>{{tMensage=`${temp}°`}}</p>
+    <div class="temperatureContent disable-select" draggable="false">
+    <p draggable="false">{{tMensage=`${temp}°`}}</p > 
         </div>
     </div>
   </div>

@@ -1,10 +1,10 @@
 <template>
   <div class="main">
     <div class="mainLeft">
-      <img src="@/assets/compass.png" alt="Logo Compass" />
+      <img  src="@/assets/compass.png" alt="Logo Compass" draggable="false" class="disable-select"/>
     </div>
-    <div class="mainRight">
-      <Title class="sucessTitleSmall" type="h5" tMensage="Our mission is" />
+    <div class="mainRight disable-select" draggable="false">
+      <Title class="sucessTitleSmall" type="h5" tMensage="Our mission is"  />
       <Texts class="sucessText" msg="Nossa missão é" />
       <Title
         class="sucessTitleBig"

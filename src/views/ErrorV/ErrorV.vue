@@ -1,5 +1,6 @@
 <template>
   <div class="erro disable-select">
+    <img src="@/assets/errorimage.png" alt="error image" class="errorimg">
     <h1>Error 401</h1>
     <h2>Unauthorized Access</h2>
     <h3>You must be logged in to access this page.</h3>
