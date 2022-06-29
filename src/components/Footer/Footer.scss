@@ -1,5 +1,5 @@
 .footer {
-  height: 10vh;
+  height: 110px;
   width: 100%;
   background: linear-gradient(90.16deg, #33383d 0%, #1c1d20 100%);
   position: absolute;
@@ -110,7 +110,8 @@
 @media (max-width: 768px) {
   .footer {
     background: none;
-    position: relative;
+    height: 100px;
+
     .timerContainer {
       display: none !important;
     }

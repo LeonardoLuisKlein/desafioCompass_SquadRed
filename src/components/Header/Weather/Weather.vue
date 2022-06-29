@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="container">
     <div class="cityTitle disable-select">
     <p >{{tMensage=`${local} - ${state}`}}</p>
     </div>
     <div class="tempContainer">
-      <div class="teste">
+      <div class="condition">
         <img v-if="imageName" draggable="false" :src="require(`@/assets/${imageName}.png`)" alt="Weather status icon" class="weatherIcon disable-select"/>
       </div>
     <div class="temperatureContent disable-select" draggable="false">

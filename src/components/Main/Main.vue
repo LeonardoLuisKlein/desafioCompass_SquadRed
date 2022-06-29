@@ -1,7 +1,10 @@
 <template>
   <div class="main">
-    <div class="mainLeft">
-      <img  src="@/assets/compass.png" alt="Logo Compass" draggable="false" class="disable-select"/>
+    <div class="logo-full">
+      <img  id="logo" src="@/assets/compass.png" alt="Logo Compass" draggable="false" class="disable-select"/>
+    </div>
+    <div class="logo-half">
+      <img src="@/assets/uol-ball-slash.png"  alt="">
     </div>
     <div class="mainRight disable-select" draggable="false">
       <Title class="sucessTitleSmall" type="h5" tMensage="Our mission is"  />
