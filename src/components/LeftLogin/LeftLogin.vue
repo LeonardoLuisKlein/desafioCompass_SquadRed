@@ -35,6 +35,14 @@ export default {
     Inputs,
     Span,
     Button
+  },
+  created(){
+    setTimeout(() => {
+      if(window.localStorage.getItem('username') &&
+      window.localStorage.getItem('password'))
+      this.$router.push('/Success')
+      this.$store.state.isLoaded = true
+    }, 5000)
   }
 };
 </script>

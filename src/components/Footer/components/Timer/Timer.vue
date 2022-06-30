@@ -27,7 +27,7 @@ export default {
           window.localStorage.setItem("name", "");
           window.localStorage.setItem("password", "");
           this.$router.push("/");
-           this.$store.state.timerState = 600
+          
          
         }
       }
@@ -41,6 +41,7 @@ export default {
   },
   destroyed() {
     this.canCount = false
+    this.$store.state.timerState = 600
   },
 };
 </script>

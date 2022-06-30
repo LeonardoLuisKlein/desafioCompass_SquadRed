@@ -10,7 +10,8 @@
 
 <script>
 export default {
-  name: "ErrorV",
+  // eslint-disable-next-line 
+  name: "Error401",
   data(){
     return {
       time: 5
@@ -38,5 +39,5 @@ export default {
 </script>
 
 <style lang="scss" scooped>
-@import "./ErrorV.scss";
+@import "./Error401.scss";
 </style>

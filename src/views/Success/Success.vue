@@ -25,17 +25,10 @@ export default {
   },
   mounted() {
     if (!this.$store.state.loggedUser) {
-      this.$router.push("/ErrorV");
+      this.$router.push("/Error401");
       this.$store.state.loggedUser = false;
       window.localStorage.setItem("loggedUser", false);
     }
-    // document.onreadystatechange = () => {
-    //   if (document.readyState == "complete") {
-    //     this.isLoaded = true;
-    //     console.log(this.isLoaded);
-    //     console.log(document.readyState);
-    //   }
-    // };
   },
 };
 </script>
