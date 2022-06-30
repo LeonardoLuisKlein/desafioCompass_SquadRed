@@ -1,6 +1,6 @@
 <template>
   <div class="erro404">
-        <img src="@/assets/error404.gif" alt="Erro 404">
+        <img src="@/assets/error404.gif" alt="Erro 404" class="errorgif">
         <h2>Página não encontrada</h2>
   </div>
 </template>

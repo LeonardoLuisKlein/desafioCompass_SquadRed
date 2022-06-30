@@ -1,10 +1,7 @@
 <template>
   <div class="erro disable-select">
-    <img src="@/assets/errorimage.png" alt="error image" class="errorimg">
-    <h1>Error 401</h1>
-    <h2>Unauthorized Access</h2>
-    <h3>You must be logged in to access this page.</h3>
-    <h3>You will be redirect in {{ time }} s...</h3>
+    <img src="@/assets/401 Error Unauthorized.gif" alt="error image" class="errorimg">
+    <h3>Você será redirecionado em {{ time }} s...</h3>
   </div>
 </template>
 
