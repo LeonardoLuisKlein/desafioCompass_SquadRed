@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <h1>ERRO 404</h1>
+  <div class="erro404">
+        <img src="@/assets/error404.gif" alt="Erro 404">
+        <h2>Página não encontrada</h2>
   </div>
 </template>
 
@@ -11,4 +12,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scooped></style>
+<style lang="scss" scooped>
+@import './Error404.scss'
+</style>

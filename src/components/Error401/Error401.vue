@@ -14,7 +14,7 @@ export default {
   name: "Error401",
   data(){
     return {
-      time: 5
+      time: 7
     }
   },
   methods: {
