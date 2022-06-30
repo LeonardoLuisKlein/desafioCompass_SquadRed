@@ -2,7 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Login from "../views/Login/Login.vue";
 import Success from "../views/Success/Success.vue";
-import ErrorV from "../views/ErrorV/Error401.vue"
+import Error401 from "../components/Error401/Error401.vue"
+import Error404 from "../components/Error404/Error404.vue"
+
 
 Vue.use(VueRouter);
 
@@ -20,7 +22,12 @@ const routes = [
   {
     path: "/Error401",
     name: "Error 401",
-    component: ErrorV,
+    component: Error401,
+  },
+  {
+    path: "*",
+    name: "Error 404",
+    component: Error404,
   },
 ];
 
