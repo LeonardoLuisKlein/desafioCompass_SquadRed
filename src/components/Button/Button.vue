@@ -29,6 +29,7 @@ export default {
         window.localStorage.setItem("loggedUser", this.$store.state.loggedUser);
         document.getElementById('spanId').style.visibility = 'hidden'
         this.$router.push('/Success')
+        this.$store.state.isLoaded = true
       } else {
         document.getElementById('spanId').style.visibility = 'visible'
         this.$store.state.loggedUser = false;

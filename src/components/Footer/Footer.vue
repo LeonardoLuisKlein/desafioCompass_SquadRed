@@ -52,6 +52,7 @@ export default {
       window.localStorage.setItem("username", "");
       window.localStorage.setItem("password", "");
       this.$router.push("/");
+      this.$store.state.timerState = 600;
     },
     resetCountdown() {
       this.$store.state.timerState = 600;

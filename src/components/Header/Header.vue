@@ -5,18 +5,20 @@
    </div>
     <TimeDate />
     <div>
-        
+    <Weather />
     </div>
   </div>
 </template>
 
 <script>
 import TimeDate from './TimeDate/TimeDate.vue'
+import Weather from './Weather/Weather.vue'
 export default {
     // eslint-disable-next-line
 name: 'Header',
 components:{
-    TimeDate
+    TimeDate,
+    Weather
 }
 }
 </script>

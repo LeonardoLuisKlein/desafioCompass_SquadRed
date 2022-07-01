@@ -1,30 +1,33 @@
 <template>
   <div class="success">
-    <Header />
-    <Texts msg="Nossa missão é" />
-    <Texts msg="Transformar o mundo" />
-    <Texts msg="construindo experiências digitais" />
-    <Texts msg="que permitam o crescimento dos nossos clientes" />
-    <Footer />
+    <PageLoader v-show="this.$store.state.isLoaded" />
+    <div v-show="!this.$store.state.isLoaded">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
   </div>
 </template>
 
 <script>
-import Texts from "@/components/Texts/Texts.vue";
+import Main from "@/components/Main/Main.vue";
 import Footer from "@/components/Footer/Footer.vue";
 import Header from "@/components/Header/Header.vue";
+import PageLoader from "@/components/PageLoader/PageLoader.vue";
 export default {
   // eslint-disable-next-line
   name: "Success",
   components: {
-    Texts,
+    Main,
     Footer,
     Header,
+    PageLoader,
   },
   mounted() {
     if (!this.$store.state.loggedUser) {
-      console.log("não pode acessar deslogado");
-      this.$router.push('/')
+      this.$router.push("/Error401");
+      this.$store.state.loggedUser = false;
+      window.localStorage.setItem("loggedUser", false);
     }
   },
 };

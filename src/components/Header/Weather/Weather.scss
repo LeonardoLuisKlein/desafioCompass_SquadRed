@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  font-size: 14px;
+
+  .tempContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 48px;
+    gap: 10px;
+  }
+
+  img {
+    height: 35px;
+    width: 35px;
+  }
+
+  .cityTitle {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1em;
+    text-align: center;
+    color: #222222;
+  }
+
+  .temperatureContent {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 72px;
+    text-align: center;
+    color: #222222;
+    display: flex;
+  }
+
+  .weatherIcon {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    .cityTitle {
+      font-size: 0.8em;
+    }
+    img {
+        width: 25px;
+        height: 25px;
+    }
+    .temperatureContent {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .condition {
+        font-size: 35px;
+    }
+  }
+}

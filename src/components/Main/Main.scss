@@ -1,0 +1,156 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 70vh;
+  width: 100vw;
+}
+
+.logo-full {
+  img {
+    position: absolute;
+    bottom: 0;
+    @media (max-height: 820px) {
+      height: 40vw;
+    }
+  }
+}
+
+.logo-half {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  img {
+    @media (max-width: 470px) {
+      width: 90vw;
+      height: 60vh;
+    }
+  }
+}
+.mainRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex end;
+  text-align: end;
+  align-content: center;
+  padding-top: 150px;
+  padding-right: 200px;
+}
+
+.sucessTitleSmall {
+  font-family: "Poppins", sans-seriff;
+  font-size: 36px;
+  line-height: 54px;
+  color: #c12d18;
+  font-weight: 700;
+}
+
+.sucessTitleBig {
+  font-family: "Poppins", sans-seriff;
+  font-size: 64px;
+  line-height: 96px;
+  color: #c12d18;
+  font-weight: 700;
+}
+
+.sucessText {
+  font-family: "Poppins", sans-seriff;
+  font-size: 24px;
+  line-height: 36px;
+  color: #222222;
+  font-weight: 400;
+}
+
+@media (max-width: 1845px) {
+  .mainRight {
+    padding-right: 50px;
+    .sucessTitleSmall {
+      font-size: 40px;
+    }
+    .sucessTitleBig {
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 1695px) {
+  .mainRight {
+    .sucessText {
+      font-size: 20px;
+      line-height: 1em;
+    }
+    .sucessTitleSmall {
+      font-size: 30px;
+      line-height: 2em;
+    }
+    .sucessTitleBig {
+      font-size: 40px;
+      line-height: 2em;
+    }
+  }
+}
+
+@media (max-width: 1330px) {
+  .mainRight {
+    .sucessText {
+      font-size: 18px;
+      line-height: 1em;
+    }
+    .sucessTitleSmall {
+      font-size: 22px;
+      line-height: 1.8em;
+    }
+    .sucessTitleBig {
+      font-size: 32px;
+      line-height: 1.8em;
+    }
+  }
+}
+
+@media (max-width: 1190px) {
+  .logo-full {
+    #logo {
+      width: 650px;
+      height: 650px;
+    }
+  }
+  .mainRight {
+    .sucessText {
+      font-size: 14px;
+      line-height: 0.9em;
+    }
+    .sucessTitleSmall {
+      font-size: 20px;
+      line-height: 1.6em;
+    }
+    .sucessTitleBig {
+      font-size: 26px;
+      line-height: 1.6em;
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  .logo-full {
+    #logo {
+      width: 550px;
+      height: 550px;
+    }
+  }
+  .mainRight {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-full {
+    #logo {
+      display: none;
+    }
+  }
+  .logo-half {
+    display: block;
+  }
+}

@@ -2,4 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    height: 15vh;
+    width: 100%;
+    @media(max-width:900px){
+        #compass-black{
+            width: 200px;
+        }
+    }
+
 }

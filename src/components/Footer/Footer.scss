@@ -25,6 +25,8 @@
     align-items: center;
     color: #ffffff;
     width: 20%;
+    padding-left: 100px;
+
     .aplicattion {
       width: 90px;
       margin-right: 20px;
@@ -49,16 +51,16 @@
     position: absolute;
     right: 0;
     height: 100%;
-    width: 200px;
+    width: 250px;
 
     .keepNav {
       height: 100%;
-      width: 130px;
+      width: 55%;
       display: flex;
       button {
         background: #ffffff;
         flex-flow: row wrap;
-        font-size: 0.8em;
+        font-size: 1em;
         color: #c13316;
         align-items: center;
         border-top: 1px solid #ffffff;
@@ -72,7 +74,7 @@
     }
 
     .logoutBut {
-      width: 130px;
+      width: 45%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -82,7 +84,7 @@
         font-weight: bold;
         height: 100%;
         background: transparent;
-        font-size: 0.8em;
+        font-size: 1em;
         color: #ffffff;
         &:hover {
           color: #c13316;
@@ -93,7 +95,13 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
+  .timerContainer {
+  padding-left: 0px !important;
+  }
+}
+
+@media (max-width: 900px) {
   .informative {
     display: none;
   }
@@ -102,6 +110,8 @@
 @media (max-width: 768px) {
   .footer {
     background: none;
+    height: 100px;
+
     .timerContainer {
       display: none !important;
     }

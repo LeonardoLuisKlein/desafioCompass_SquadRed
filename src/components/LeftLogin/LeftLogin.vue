@@ -4,7 +4,7 @@
       <img
         draggable="false"
         src="@/assets/logo.png"
-        class="disable-select"
+        class="img-1 disable-select"
         alt=""
       />
     </div>
@@ -35,6 +35,14 @@ export default {
     Inputs,
     Span,
     Button
+  },
+  created(){
+    setTimeout(() => {
+      if(window.localStorage.getItem('username') &&
+      window.localStorage.getItem('password'))
+      this.$router.push('/Success')
+      this.$store.state.isLoaded = true
+    }, 5000)
   }
 };
 </script>

@@ -1,0 +1,48 @@
+$colors: #ff2d04, #FFFFFF, #ff2d04, #ffffff;
+// -----------------------------------------------------
+.pageLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%);
+  z-index: 999;
+}
+// -----------------------------------------------------
+.cube {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  @for $i from 1 through length($colors) {
+    &:nth-child(#{$i}) {
+      background-color: nth($colors, $i);
+    }
+  }
+  &:first-child {
+    animation: left 1s infinite;
+  }
+  &:last-child {
+    animation: right 1s infinite 0.5s;
+  }
+}
+// -----------------------------------------------------
+@keyframes left {
+  40% {
+    transform: translateX(-60px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+@keyframes right {
+  40% {
+    transform: translateX(60px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
