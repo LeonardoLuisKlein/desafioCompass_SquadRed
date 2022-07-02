@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     getWeather() {
-      fetch("http://ip-api.com/json/?fields=city,region,lat,lon")
+      fetch("https://ip-api.com/json/?fields=city,region,lat,lon")
         .then((resposta) => resposta.json())
         .then((dadosCity) => {
           this.state = dadosCity.region;
@@ -49,7 +49,7 @@ export default {
           this.long = dadosCity.lon;
 
           fetch(
-            `http://api.weatherapi.com/v1/current.json?key=b3972d7c329b490c9c1175956222706&q=${this.lat},${this.long}`
+            `https://api.weatherapi.com/v1/current.json?key=b3972d7c329b490c9c1175956222706&q=${this.lat},${this.long}`
           )
             .then((resposta) => resposta.json())
             .then((dados) => {
