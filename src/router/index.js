@@ -4,7 +4,7 @@ import Login from "../views/Login/Login.vue";
 import Success from "../views/Success/Success.vue";
 import Error401 from "../components/Error401/Error401.vue";
 import Error404 from "../components/Error404/Error404.vue";
-
+const { isNavigationFailure, NavigationFailureType } = VueRouter;
 Vue.use(VueRouter);
 
 const routes = [
@@ -43,6 +43,11 @@ router.beforeEach((to, from, next) => {
 
 const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch((error) => {});
+  originalPush.call(this, location).catch((error) => {
+    if (!isNavigationFailure(error, NavigationFailureType.duplicated)) {
+      throw Error(error);
+    }
+  });
 };
+
 export default router;
