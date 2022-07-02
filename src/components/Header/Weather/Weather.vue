@@ -40,13 +40,13 @@ export default {
   },
   methods: {
     getWeather() {
-      fetch("https://ip-api.com/json/?fields=city,region,lat,lon")
+      fetch("https://ipapi.co/json/")
         .then((resposta) => resposta.json())
         .then((dadosCity) => {
-          this.state = dadosCity.region;
+          this.state = dadosCity.region_code;
           this.local = dadosCity.city;
-          this.lat = dadosCity.lat;
-          this.long = dadosCity.lon;
+          this.lat = dadosCity.latitude;
+          this.long = dadosCity.longitude;
 
           fetch(
             `https://api.weatherapi.com/v1/current.json?key=b3972d7c329b490c9c1175956222706&q=${this.lat},${this.long}`
