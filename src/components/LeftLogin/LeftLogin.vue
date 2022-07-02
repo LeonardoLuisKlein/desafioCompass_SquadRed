@@ -16,8 +16,18 @@
     </div>
     <div class="form">
       <h2 class="disable-select">Login</h2>
-      <Inputs type="text" placeholder="Usuário" idInput="userInput" />
-      <Inputs type="password" placeholder="Senha" idInput="pwInput" />
+      <Inputs
+        type="text"
+        placeholder="Usuário"
+        idInput="userInput"
+        v-model="user"
+      />
+      <Inputs
+        type="password"
+        placeholder="Senha"
+        idInput="pwInput"
+        v-model="pw"
+      />
       <Span />
       <Button />
     </div>
@@ -34,16 +44,27 @@ export default {
   components: {
     Inputs,
     Span,
-    Button
+    Button,
   },
-  created(){
-    setTimeout(() => {
-      if(window.localStorage.getItem('username') &&
-      window.localStorage.getItem('password'))
-      this.$router.push('/Success')
-      this.$store.state.isLoaded = true
-    }, 5000)
-  }
+  data() {
+    return {
+      user: "",
+      pw: "",
+    };
+  },
+  methods: {
+    verify() {
+      setTimeout(() => {
+        this.$router.push("/Success");
+        this.$store.state.isLoaded = true;
+      }, 5000);
+    },
+  },
+  created() {
+    if (localStorage.getItem("username") && localStorage.getItem("password")) {
+      this.verify();
+    }
+  },
 };
 </script>
 

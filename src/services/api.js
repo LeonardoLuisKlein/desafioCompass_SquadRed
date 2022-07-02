@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
 const apiLocation = axios.create({
-    baseURL: "http://ip-api.com/json/?fields=city,region,lat,long"
-})
+  baseURL: "http://ip-api.com/json/?fields=city,region,lat,long",
+});
 
-export default apiLocation
+export default apiLocation;

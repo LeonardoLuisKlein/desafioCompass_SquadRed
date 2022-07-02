@@ -62,7 +62,7 @@ export default {
 
         let actualDate = `${days[dayWeek]}, ${dayMonth} de ${months[month]} de ${year}`;
         this.actualDate = actualDate;
-        this.$store.state.isLoaded = false
+        this.$store.state.isLoaded = false;
       }
     },
   },
@@ -71,9 +71,9 @@ export default {
       this.getHourDate();
     }, 1000);
   },
-  destroyed(){
-    this.timerEnabled = false
-  }
+  destroyed() {
+    this.timerEnabled = false;
+  },
 };
 </script>
 <style lang="scss" scooped>

@@ -1,26 +1,30 @@
 <template>
   <div class="erro disable-select">
-    <img src="@/assets/401 Error Unauthorized.gif" alt="error image" class="errorimg">
+    <img
+      src="@/assets/401 Error Unauthorized.gif"
+      alt="error image"
+      class="errorimg"
+    />
     <h3>Você será redirecionado em {{ time }} s...</h3>
   </div>
 </template>
 
 <script>
 export default {
-  // eslint-disable-next-line 
+  // eslint-disable-next-line
   name: "Error401",
-  data(){
+  data() {
     return {
-      time: 7
-    }
+      time: 7,
+    };
   },
   methods: {
-    redirect(){
-      this.time-- 
-      if(this.time==0){
-        this.$router.push('/')
+    redirect() {
+      this.time--;
+      if (this.time == 0) {
+        this.$router.push("/");
       }
-    }
+    },
   },
   mounted() {
     this.$store.state.loggedUser = false;
@@ -29,7 +33,7 @@ export default {
     window.localStorage.setItem("password", "");
 
     setInterval(() => {
-      this.redirect()
+      this.redirect();
     }, 1000);
   },
 };

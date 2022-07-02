@@ -2,9 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Login from "../views/Login/Login.vue";
 import Success from "../views/Success/Success.vue";
-import Error401 from "../components/Error401/Error401.vue"
-import Error404 from "../components/Error404/Error404.vue"
-
+import Error401 from "../components/Error401/Error401.vue";
+import Error404 from "../components/Error404/Error404.vue";
 
 Vue.use(VueRouter);
 
@@ -38,9 +37,8 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  document.title = `${process.env.VUE_APP_TITLE} | ${ to.name }`
-  next()
-})
-
+  document.title = `${process.env.VUE_APP_TITLE} | ${to.name}`;
+  next();
+});
 
 export default router;

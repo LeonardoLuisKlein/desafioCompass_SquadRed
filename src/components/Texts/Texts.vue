@@ -20,7 +20,7 @@ export default {
       type: String,
       default: "null",
     },
-    textContainer:String
+    textContainer: String,
   },
 };
 </script>

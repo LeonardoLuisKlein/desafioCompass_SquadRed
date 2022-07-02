@@ -14,7 +14,6 @@ export default new Vuex.Store({
   },
   getters: {},
   mutations: {
-
     setName(state, username) {
       state.username = username;
       if (/^([a-zA-Z]{2,}\.[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}?)/.test(username)) {

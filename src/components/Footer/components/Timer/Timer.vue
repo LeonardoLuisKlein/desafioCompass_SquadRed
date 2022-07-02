@@ -27,21 +27,19 @@ export default {
           window.localStorage.setItem("name", "");
           window.localStorage.setItem("password", "");
           this.$router.push("/");
-          
-         
         }
       }
     },
   },
   mounted() {
-    this.canCount = true
+    this.canCount = true;
     setInterval(() => {
       this.regressive();
     }, 1000);
   },
   destroyed() {
-    this.canCount = false
-    this.$store.state.timerState = 600
+    this.canCount = false;
+    this.$store.state.timerState = 600;
   },
 };
 </script>

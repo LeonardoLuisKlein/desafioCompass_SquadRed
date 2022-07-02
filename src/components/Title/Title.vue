@@ -12,23 +12,23 @@
 <script>
 export default {
   // eslint-disable-next-line
-    name: "Title",
-    props:{
-      type: {
-            type: String,
-            require: true,
-        },
-        nameClass: {
-            type: String,
-        },
-        tMensage:{
-            type: String,
-            default: 'null',
-        },
+  name: "Title",
+  props: {
+    type: {
+      type: String,
+      require: true,
     },
-}
+    nameClass: {
+      type: String,
+    },
+    tMensage: {
+      type: String,
+      default: "null",
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-    @import "./Title.scss"
+@import "./Title.scss";
 </style>
